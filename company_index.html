@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning JSON</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var companies = `[
+    {
+        "companyName": "Pen corp",
+        "employees": 500,
+        "ceo": "Abdullah",
+        "rating": 4.5,
+        "hasOfficeSpace": true
+    },
+    {
+        "companyName": "Note ltd",
+        "employees": 720,
+        "ceo": "Shamsul Arefin",
+        "rating": 3.9,
+        "hasOfficeSpace": true 
+
+    },
+    {
+        "companyName": "Crack the code ltd",
+        "employees": 50,
+        "ceo": "Gayle Laakmann Mcdowell",
+        "rating": 4.3,
+        "hasOfficeSpace": true
+    },
+    {
+        "companyName": "Rocket corp",
+        "employees": 5,
+        "ceo": null,
+        "rating": 4.3,
+        "hasOfficeSpace": false 
+    }
+
+]`
+
+        // now do some operations.
+        document.write("<br>___Listed Company Details and Ratings___<br><br>")
+        document.write("Company = " + JSON.parse(companies)[0].companyName.toUpperCase() + " _____ CEO = " + JSON.parse(companies)[0].ceo + " _____ Rating: #" + JSON.parse(companies)[0].rating +"<br>")
+        document.write("Company = " + JSON.parse(companies)[1].companyName.toUpperCase() + " _____ CEO = " + JSON.parse(companies)[1].ceo + " _____ Rating: #" + JSON.parse(companies)[1].rating +"<br>")
+        document.write("Company = " + JSON.parse(companies)[2].companyName.toUpperCase() + " _____ CEO = " + JSON.parse(companies)[2].ceo + " _____ Rating: #" + JSON.parse(companies)[2].rating +"<br>")
+        document.write("Company = " + JSON.parse(companies)[3].companyName.toUpperCase() + " _____ CEO = " + JSON.parse(companies)[3].ceo + " _____ Rating: #" + JSON.parse(companies)[3].rating +"<br>")
+
+</script>
+    </body>
+</html>

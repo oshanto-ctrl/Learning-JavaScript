@@ -1,0 +1,32 @@
+[
+    {
+        "companyName": "Pen corp",
+        "employees": 500,
+        "ceo": "Abdullah",
+        "rating": 4.5,
+        "hasOfficeSpace": true
+    },
+    {
+        "companyName": "Note ltd",
+        "employees": 720,
+        "ceo": "Shamsul Arefin",
+        "rating": 3.9,
+        "hasOfficeSpace": true 
+
+    },
+    {
+        "companyName": "Crack the code ltd",
+        "employees": 50,
+        "ceo": "Gayle Laakmann Mcdowell",
+        "rating": 4.3,
+        "hasOfficeSpace": true
+    },
+    {
+        "companyName": "Rocket corp",
+        "employees": 5,
+        "ceo": null,
+        "rating": 4.3,
+        "hasOfficeSpace": false 
+    }
+
+]
