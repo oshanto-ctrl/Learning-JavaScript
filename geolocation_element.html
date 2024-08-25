@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Element Example</title>
+</head>
+<body>
+                <!-- Process
+                    Device's GPS/Location system must be turned on
+                    by willingness of the user for this script to work.
+                -->
+
+    <!-- Script -->
+     <script>
+        if(typeof navigator.geolocation == 'undefined') {
+            alert("Geolocation is not supported.");
+        } else {
+            navigator.geolocation.getCurrentPosition(userGrantedLocationPermission, userDeniendLocationPermission);
+        }
+
+        // Function: User Granted Location Permission to use.
+        function userGrantedLocationPermission(position) {
+            let lat = position.coords.latitude;
+            let lon = position.coords.longitude;
+
+            alert("Permission Granted. You are at location:\n\n" 
+                + lat + ", " + lon + "\n\nClick 'OK' to load Google Maps with your location"
+            );
+
+            window.location.replace("https://www.google.com/maps/@" + lat + "," + lon + ",19z");
+        }
+
+        // Function User Denied Location Permission to use.
+        function userDeniendLocationPermission(error) {
+            let errorMessage;
+
+            switch(error.code) {
+                case 1: errorMessage = "Permission Denied."; break;
+                case 2: errorMessage = "Position Unavailable."; break;
+                case 3: errorMessage = "Operation Timed Out."; break;
+                case 4: errorMessage = "Unknown Error Occured."; break;
+            }
+
+            alert("Geolocation Error: " + errorMessage);
+        }
+     </script>
+
+    <!-- 
+        Book: Robin Nixon's PHP, Mysql, & JS 5th edition.
+    -->
+    
+</body>
+</html>
